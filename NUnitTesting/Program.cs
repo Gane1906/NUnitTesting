@@ -9,7 +9,7 @@ namespace NUnitTesting
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Vending machine\n2.exit\nEnter your option: ");
+                Console.Write("1.Vending machine\n2.Day of week\n3.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -20,6 +20,16 @@ namespace NUnitTesting
                         vending.giveChange(amount);
                         break;
                     case 2:
+                        DayOfWeek d = new DayOfWeek();
+                        Console.WriteLine("Enter year");
+                        int year = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter month");
+                        int month = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter date");
+                        int date = Convert.ToInt32(Console.ReadLine());
+                        d.day(month, date, year);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
