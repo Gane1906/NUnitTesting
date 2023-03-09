@@ -9,7 +9,7 @@ namespace NUnitTesting
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Vending machine\n2.Day of week\n3.exit\nEnter your option: ");
+                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,6 +30,10 @@ namespace NUnitTesting
                         d.day(month, date, year);
                         break;
                     case 3:
+                        TemperatureConverter tc = new TemperatureConverter();
+                        tc.conversion();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
