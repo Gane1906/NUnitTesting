@@ -9,7 +9,7 @@ namespace NUnitTesting
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.exit\nEnter your option: ");
+                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.Monthly payment\n5.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -34,6 +34,16 @@ namespace NUnitTesting
                         tc.conversion();
                         break;
                     case 4:
+                        MonthlyPayment monthlyPayment = new MonthlyPayment();
+                        Console.WriteLine("Enter prinicipal loan");
+                        int principal = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter year");
+                        int y = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter rate of intrest");
+                        int rate = Convert.ToInt32(Console.ReadLine());
+                        monthlyPayment.calculatePayment(principal,y,rate);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }

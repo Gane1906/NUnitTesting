@@ -8,7 +8,7 @@ namespace NUnitTesting
 {
     public class TemperatureConverter
     {
-        public void farenheitToCelcius(int farenheit)
+        public void farenheitToCelcius(double farenheit)
         { 
             double celcius = (farenheit - 32) * 5 / 9;
             Console.WriteLine(farenheit + " farenheit temperature in celcius is " + celcius);
@@ -27,7 +27,7 @@ namespace NUnitTesting
             {
                 case 1:
                     Console.Write("Enter temperature in Farenheit: ");
-                    int farenheit = Convert.ToInt32(Console.ReadLine());
+                    double farenheit = Convert.ToInt32(Console.ReadLine());
                     temperatureConverter.farenheitToCelcius(farenheit);
                     break;
                 case 2:
