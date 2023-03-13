@@ -9,7 +9,7 @@ namespace NUnitTesting
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.Monthly payment\n5.exit\nEnter your option: ");
+                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.Monthly payment\n5.square root\n6.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -44,6 +44,12 @@ namespace NUnitTesting
                         monthlyPayment.calculatePayment(principal,y,rate);
                         break;
                     case 5:
+                        Console.WriteLine("Ente number for square root");
+                        int number1 = Convert.ToInt32(Console.ReadLine());
+                        SquareRoot sqrt = new SquareRoot();
+                        sqrt.calculateRoot(number1);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
