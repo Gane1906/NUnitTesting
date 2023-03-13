@@ -9,7 +9,7 @@ namespace NUnitTesting
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.Monthly payment\n5.square root\n6.exit\nEnter your option: ");
+                Console.Write("1.Vending machine\n2.Day of week\n3.Degree Conversions\n4.Monthly payment\n5.square root\n6.Binary number\n7.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -50,6 +50,11 @@ namespace NUnitTesting
                         sqrt.calculateRoot(number1);
                         break;
                     case 6:
+                        Console.WriteLine("Enter decimal number: ");
+                        int decimalNumber= Convert.ToInt32(Console.ReadLine());
+                        BinaryNumber.toBinary(decimalNumber);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
